@@ -5,7 +5,6 @@ fetch("data/programs.json?t=" + Date.now(), { cache: "no-store" })
   .then(res => res.json())
   .then(data => {
     container.innerHTML = ""; // Clear Loading
-
     data.forEach(program => {
       const div = document.createElement("div");
       div.className = "program-card";
