@@ -1,0 +1,26 @@
+.program-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.program-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.program-card h3 {
+  margin: 0 0 10px;
+  color: #4CAF50;
+}
+
+.program-card pre {
+  background: #f0f0f0;
+  padding: 10px;
+  overflow-x: auto;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
