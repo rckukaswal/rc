@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programs</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/programs.css">
+<meta charset="UTF-8">
+<title>Java Programs</title>
+<style>
+  body { font-family: Arial; background:#f0f0f0; padding:20px; }
+  .program-card { background:#fff; padding:15px; margin:10px 0; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+  pre { background:#eee; padding:10px; border-radius:5px; overflow-x:auto; }
+</style>
 </head>
 <body>
-  <header>
-    <div class="logo">Programs</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="programs.html">Programs</a>
-      <a href="notes.html">Notes</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Program List</h2>
-    <div id="program-list" class="program-container"></div>
-  </main>
+<h1>Java Programs Repository</h1>
+<div id="programs-container">Loading...</div>
 
-  <footer>
-    <p>© 2025 My GitHub Website</p>
-  </footer>
+<script>
+const container = document.getElementById("programs-container");
 
-  <script src="js/programs.js"></script>
+// Fetch JSON with cache-busting
+fetch("data/programs.json?t=" + Date.now(), { cache: "no-store" })
+  .then(res => {
+    if(!res.ok) throw new Error("HTTP Error " + res.status);
+    return res.json();
+  })
+  .then(data => {
+    container.innerHTML = ""; // clear Loading
+    data.forEach(program => {
+      const div = document.createElement("div");
+      div.className = "program-card";
+      div.innerHTML = `
+        <h3>${program.title}</h3>
+        <p><b>Language:</b> ${program.language}</p>
+        <p><b>Category:</b> ${program.category}</p>
+        <pre><code>// File: ${program.file}</code></pre>
+      `;
+      container.appendChild(div);
+    });
+  })
+  .catch(err => {
+    container.innerText = "Failed to load programs: " + err.message;
+  });
+</script>
+
 </body>
 </html>
