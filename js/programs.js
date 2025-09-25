@@ -1,25 +1,23 @@
-const container = document.getElementById("program-list");
+const container = document.getElementById("programs-container");
+container.innerHTML = "Loading...";
 
-fetch("./data/programs.json?t=" + new Date().getTime())
+fetch("data/programs.json?t=" + Date.now(), { cache: "no-store" })
   .then(res => res.json())
-  .then(programs => {
-    programs.forEach(prog => {
-      const card = document.createElement("div");
-      card.className = "program-card";
+  .then(data => {
+    container.innerHTML = ""; // Clear Loading
 
-      card.innerHTML = `
-        <h3>${prog.title}</h3>
-        <p><b>Language:</b> ${prog.language}</p>
-        <p><b>Category:</b> ${prog.category}</p>
-        <pre id="code-${prog.title.replace(/\s+/g, '')}">Loading...</pre>
+    data.forEach(program => {
+      const div = document.createElement("div");
+      div.className = "program-card";
+      div.innerHTML = `
+        <h3>${program.title}</h3>
+        <p><b>Language:</b> ${program.language}</p>
+        <p><b>Category:</b> ${program.category}</p>
+        <pre><code>${program.file}</code></pre>
       `;
-
-      container.appendChild(card);
-
-      fetch(prog.file + "?t=" + new Date().getTime())
-        .then(res => res.text())
-        .then(code => {
-          document.getElementById(`code-${prog.title.replace(/\s+/g, '')}`).textContent = code;
-        });
+      container.appendChild(div);
     });
+  })
+  .catch(err => {
+    container.innerText = "Error loading programs: " + err.message;
   });
