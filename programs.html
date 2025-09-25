@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Java Programs</title>
+<title>Java Programs Repository</title>
 <style>
   body { font-family: Arial; background:#f0f0f0; padding:20px; }
   .program-card { background:#fff; padding:15px; margin:10px 0; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
   pre { background:#eee; padding:10px; border-radius:5px; overflow-x:auto; }
+  button { margin-top: 5px; }
 </style>
 </head>
 <body>
@@ -15,22 +16,37 @@
 <div id="programs-container"></div>
 
 <script>
-// Directly define all programs in a JS array
+// Example for S1 and S2, baaki aise hi add karo
 const programs = [
-  { title: "S1 Hello World", language: "Java", category: "Basics", file: "programs/S1.java" },
-  { title: "S2 Data Types Demo", language: "Java", category: "Basics", file: "programs/S2.java" },
-  { title: "S3 Selfpractice", language: "Java", category: "Basics", file: "programs/S3.java" },
-  { title: "S4 Selfpractice", language: "Java", category: "Basics", file: "programs/S4.java" },
-  { title: "S5 Selfpractice", language: "Java", category: "Basics", file: "programs/S5.java" },
-  { title: "S6 Selfpractice", language: "Java", category: "Basics", file: "programs/S6.java" },
-  { title: "S7 Selfpractice", language: "Java", category: "Basics", file: "programs/S7.java" },
-  { title: "S8 Selfpractice", language: "Java", category: "Basics", file: "programs/S8.java" },
-  { title: "S9 Selfpractice", language: "Java", category: "Basics", file: "programs/S9.java" },
-  { title: "S10 Selfpractice", language: "Java", category: "Basics", file: "programs/S10.java" },
-  { title: "S11 Selfpractice", language: "Java", category: "Basics", file: "programs/S11.java" },
-  { title: "S12 Selfpractice", language: "Java", category: "Basics", file: "programs/S12.java" },
-  { title: "S13 Selfpractice", language: "Java", category: "Basics", file: "programs/S13.java" },
-  { title: "S14 Selfpractice", language: "Java", category: "Basics", file: "programs/S14.java" }
+  {
+    title: "S1 Hello World",
+    language: "Java",
+    category: "Basics",
+    code: `public class S1 {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}`
+  },
+  {
+    title: "S2 Data Types Demo",
+    language: "Java",
+    category: "Basics",
+    code: `public class S2 {
+    public static void main(String[] args) {
+        int a = 10;
+        double b = 20.5;
+        char c = 'A';
+        boolean d = true;
+
+        System.out.println("Integer: " + a);
+        System.out.println("Double: " + b);
+        System.out.println("Char: " + c);
+        System.out.println("Boolean: " + d);
+    }
+}`
+  }
+  // Add S3–S14 in same format
 ];
 
 const container = document.getElementById("programs-container");
@@ -42,8 +58,14 @@ programs.forEach(program => {
     <h3>${program.title}</h3>
     <p><b>Language:</b> ${program.language}</p>
     <p><b>Category:</b> ${program.category}</p>
-    <pre><code>// File: ${program.file}</code></pre>
+    <button>Show Code</button>
+    <pre style="display:none;"><code>${program.code}</code></pre>
   `;
+  const button = div.querySelector("button");
+  const pre = div.querySelector("pre");
+  button.addEventListener("click", () => {
+    pre.style.display = pre.style.display === "none" ? "block" : "none";
+  });
   container.appendChild(div);
 });
 </script>
