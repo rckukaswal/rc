@@ -1,98 +1,16 @@
 [
-  {
-    "title": "Hello World Program",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/HelloWorld.java"
-  },
-  {
-    "title": "Data Types Demo",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/DataTypesDemo.java"
-  },
-{
-    "title": "Selfpractice",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/S1.java"
-  },
-{
-    "title": "Selfpractice",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/S2.java"
-  },
-{
-    "title": "Selfpractice",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/S3.java"
-  },
-  {
-    "title": "Selfpractice",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/S4.java"
-  },
-  {
-    "title": "Selfpractice",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/SS.java"
-  },
-  {
-    "title": "Selfpractice",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/S6.java"
-  },
-  {
-    "title": "Selfpractice",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/S7.java"
-  },
-  {
-    "title": "Selfpractice",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/S8.java"
-  },
-  {
-    "title": "Selfpractice",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/S9.java"
-  },
-  {
-    "title": "Selfpractice",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/S10.java"
-  },
-  {
-    "title": "Selfpractice",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/S11.java"
-  },
-  {
-    "title": "Selfpractice",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/S12.java"
-  },
-  {
-    "title": "Selfpractice",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/S13.java"
-  },
-  {
-    "title": "Selfpractice",
-    "language": "Java",
-    "category": "Basics",
-    "file": "programs/java/S14.java"
-  }
+  { "title": "S1 Hello World", "language": "Java", "category": "Basics", "file": "programs/S1.java" },
+  { "title": "S2 Data Types Demo", "language": "Java", "category": "Basics", "file": "programs/S2.java" },
+  { "title": "S3 Selfpractice", "language": "Java", "category": "Basics", "file": "programs/S3.java" },
+  { "title": "S4 Selfpractice", "language": "Java", "category": "Basics", "file": "programs/S4.java" },
+  { "title": "S5 Selfpractice", "language": "Java", "category": "Basics", "file": "programs/S5.java" },
+  { "title": "S6 Selfpractice", "language": "Java", "category": "Basics", "file": "programs/S6.java" },
+  { "title": "S7 Selfpractice", "language": "Java", "category": "Basics", "file": "programs/S7.java" },
+  { "title": "S8 Selfpractice", "language": "Java", "category": "Basics", "file": "programs/S8.java" },
+  { "title": "S9 Selfpractice", "language": "Java", "category": "Basics", "file": "programs/S9.java" },
+  { "title": "S10 Selfpractice", "language": "Java", "category": "Basics", "file": "programs/S10.java" },
+  { "title": "S11 Selfpractice", "language": "Java", "category": "Basics", "file": "programs/S11.java" },
+  { "title": "S12 Selfpractice", "language": "Java", "category": "Basics", "file": "programs/S12.java" },
+  { "title": "S13 Selfpractice", "language": "Java", "category": "Basics", "file": "programs/S13.java" },
+  { "title": "S14 Selfpractice", "language": "Java", "category": "Basics", "file": "programs/S14.java" }
 ]
