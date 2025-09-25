@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Hello World Program",
+    "language": "Java",
+    "category": "Basics",
+    "file": "programs/java/HelloWorld.java"
+  },
+  {
+    "title": "Data Types Demo",
+    "language": "Java",
+    "category": "Basics",
+    "file": "programs/java/DataTypesDemo.java"
+  }
+]
